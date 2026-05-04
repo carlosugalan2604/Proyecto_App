@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@android:drawable/ic_menu_today"
+            android:title="Dashboard General" />
+        <item
+            android:id="@+id/nav_stock"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="Gestión de Stock" />
+        <item
+            android:id="@+id/nav_tareas"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Tareas de Equipo" />
+        <item
+            android:id="@+id/nav_trabajadores"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="Trabajadores" />
+    </group>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Cerrar Sesión" />
+
+</menu>
