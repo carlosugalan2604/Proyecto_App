@@ -3,5 +3,14 @@
     <style name="Base.Theme.Proyecto_App" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <!-- Igual que en el tema claro: evita que el contenido quede detrás
+             de las barras del sistema en Android 15. -->
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+
+        <!-- En modo oscuro mantenemos el mismo verde de marca -->
+        <item name="android:statusBarColor">#00CC99</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">#1C1B1F</item>
     </style>
 </resources>

@@ -302,4 +302,16 @@ public class ApiClient {
     public static void getProducto(int id, ApiCallback callback) {
         get(BASE_URL + "/api/productos/" + id, callback);
     }
+
+    // Crea un nuevo pedido con las líneas de productos que le pasamos.
+    // lineasJson es un array JSON con objetos { "idProducto": X, "cantidad": Y }
+    public static void crearPedido(int idUsuario, String lineasJson, ApiCallback callback) {
+        try {
+            // Construimos el objeto pedido con el id del cliente y las líneas
+            String json = "{\"idUsuario\":" + idUsuario + ",\"lineas\":" + lineasJson + "}";
+            post(BASE_URL + "/api/pedidos", json, callback);
+        } catch (Exception e) {
+            callback.onError("Error al crear JSON: " + e.getMessage());
+        }
+    }
 }

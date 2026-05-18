@@ -3,6 +3,20 @@
     <style name="Base.Theme.Proyecto_App" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Android 15 fuerza el modo edge-to-edge (el contenido se dibuja detrás
+             de la barra de estado y la barra de navegación). Esta línea opta por
+             el comportamiento clásico: el sistema reserva el espacio de las barras
+             y el contenido nunca queda tapado por la hora, el wifi ni los botones. -->
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+
+        <!-- Color verde de la app en la barra de estado superior -->
+        <item name="android:statusBarColor">#00CC99</item>
+        <!-- Iconos de la barra de estado en blanco (false = iconos claros,
+             necesario porque el fondo verde es oscuro) -->
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Barra de navegación inferior en blanco para no interferir con el contenido -->
+        <item name="android:navigationBarColor">#FFFFFF</item>
     </style>
 
     <style name="Theme.Proyecto_App" parent="Base.Theme.Proyecto_App" />

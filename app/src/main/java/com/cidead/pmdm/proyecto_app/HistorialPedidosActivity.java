@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,6 +46,10 @@ public class HistorialPedidosActivity extends AppCompatActivity {
         // Al pulsar el botón de logout, cerramos la sesión
         Button btnLogout = findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(v -> cerrarSesion());
+
+        // El FAB abre la pantalla para crear un nuevo pedido
+        FloatingActionButton fab = findViewById(R.id.fabNuevoPedido);
+        fab.setOnClickListener(v -> startActivity(new Intent(this, NuevoPedidoActivity.class)));
 
         // Configuramos la lista de pedidos
         RecyclerView rv = findViewById(R.id.rvPedidos);

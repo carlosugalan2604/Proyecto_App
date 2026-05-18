@@ -41,6 +41,7 @@
         <!-- ── Cliente ──────────────────────────────────────────────── -->
         <activity android:name=".HistorialPedidosActivity"  android:exported="false" />
         <activity android:name=".DetallePedidoActivity"     android:exported="false" />
+        <activity android:name=".NuevoPedidoActivity"       android:exported="false" />
 
     </application>
 

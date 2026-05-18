@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<!-- FrameLayout como raíz para poder superponer el FAB sobre la lista -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -49,13 +55,27 @@
             android:textSize="12sp" />
     </LinearLayout>
 
-    <!-- LISTA DE PEDIDOS -->
+    <!-- LISTA DE PEDIDOS — con paddingBottom extra para que el FAB no tape el último elemento -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPedidos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="12dp"
-        android:paddingBottom="16dp"
+        android:paddingBottom="80dp"
         android:clipToPadding="false" />
 
 </LinearLayout>
+
+<!-- FAB para crear un nuevo pedido (esquina inferior derecha) -->
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fabNuevoPedido"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="16dp"
+    android:contentDescription="Nuevo pedido"
+    app:srcCompat="@android:drawable/ic_input_add"
+    app:backgroundTint="#00CC99"
+    app:tint="#FFFFFF" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
