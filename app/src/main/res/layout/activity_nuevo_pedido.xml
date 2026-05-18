@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- CABECERA CON TOOLBAR -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00CC99"
+        android:elevation="4dp"
+        android:title="Nuevo Pedido"
+        android:titleTextColor="#FFFFFF" />
+
+    <!-- LISTA DE PRODUCTOS (scrollable) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProductosNuevoPedido"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false" />
+
+    <!-- PIE: total + botón confirmar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total del pedido:"
+                android:textSize="15sp"
+                android:textColor="#546E7A" />
+
+            <TextView
+                android:id="@+id/tvTotalNuevoPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="€ 0.00"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#00CC99" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnConfirmarPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmar pedido"
+            android:backgroundTint="#00CC99"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+    </LinearLayout>
+
+</LinearLayout>
