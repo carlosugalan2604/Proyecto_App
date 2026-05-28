@@ -26,7 +26,7 @@ public class ApiClient {
 
     // La dirección base del servidor donde está nuestra API
     // Todos los endpoints se construyen añadiendo la ruta después de esta URL
-    private static final String BASE_URL = "http://192.168.0.19:8085";
+    private static final String BASE_URL = "http://10.42.64.18:8085";
 
     // Le decimos a OkHttp que el contenido que enviamos es JSON con codificación UTF-8
     private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");

@@ -130,9 +130,11 @@ public class PanelTareasActivity extends AppCompatActivity {
                             obj.getInt("idUsuario")
                         );
                         t.idTarea = obj.getInt("idTarea");
-                        lista.add(t);
-                        // Contamos las tareas que no están completadas para el badge
-                        if (!t.estado.equals("COMPLETADA")) pendientes++;
+                        // Solo mostramos tareas no completadas
+                        if (!t.estado.equals("COMPLETADA")) {
+                            lista.add(t);
+                            pendientes++;
+                        }
                     }
                     int finalPendientes = pendientes;
                     runOnUiThread(() -> {
